@@ -1,5 +1,5 @@
 # Heart Disease Ensemble Classification
- Practicing bagging and boosting with heart disease data. I compare linear regression, bagging, and boosting models then determine the most reasonable model to predict heart disease in patients.
+ Practicing bagging and boosting with heart disease data. I compare logistic regression, bagging, and boosting models then determine the most reasonable model to predict heart disease in patients.
 
 # Dataset Notes
 This dataset was obtained form UC Irvine's machine learning repository.
@@ -26,5 +26,7 @@ Janosi,Andras, Steinbrunn,William, Pfisterer,Matthias, Detrano,Robert & M.D.,M.D
 
 
 
-# First attempt: Linear Regression
-First, I performed a simple linear regression knowing that the results wouldn't look great. I reduced the target values to either be healthy (0) or sick (1-4 reduced to 1). I used the SciKit-learn linear model with all 11 features, which failed to converge. Using 80% of the dataset for training, the prediction accuracy was about 82%
+# Logistic Regression
+First, I performed a simple logistic regression knowing that the results wouldn't look great because of the high dimensionality of features. I reduced the target values to either be healthy (0) or sick (1-4 reduced to 1). I used the SciKit-learn logistic model with all 11 features, which failed to converge. Using 80% of the dataset for training, the prediction accuracy was about 82%
+
+# Ensemble Bagging
