@@ -2,10 +2,19 @@
 Practicing classification with heart disease data. I compare logistic regression, SVM, decision tree, random forest, and naive bayesian models then determine the most reasonable model to predict heart disease in patients.
 
 # clean_data.py
-This script converts the CSV into a dataframe and cleans it up by throwing out entries with null values. Only 6 entries out of 303 (~2%) had missing values, so it was acceptable to throw them out.
+This script converts the CSV into a dataframe. There are methods to manipulate the dataframe, including throwing entries with missing values, replacing missing values with the column's mode, reducing the Sick classification to one value, and scaling features.
 
 # classification_comparison.ipynb
-This notebook compares the performances of 5 classification models. Each model has tuned hyperparameters, if applicable. Uses KFold sampling with 5 splits. For now, the target was reduced to values 0 (Healthy) and 1 (Sick) rather than the expanded Sick classification.
+This notebook compares the performances of several classification models. Each model has tuned hyperparameters, if applicable. Uses KFold sampling with 5 splits. For now, the target was reduced to values 0 (Healthy) and 1 (Sick) rather than the expanded Sick classification.
+
+The results show that logistic regression, SVM, random forest, and GaussianNB performed about the same at an R^2 value of 0.83. I will use Logistic Regression for the rest of this dataset's analysis.
+
+# feature_comparison.ipynb
+This notebook inspects the importance of each feature in the model. I wanted to see if I could simplify the dataset by reducing dimensionality and possibly yield a better result. I continued using the reduced Sick values where the target was only binomial. 
+
+I first used a Extra Trees classifier to get feature importances and sorted them. Then, I performed logistic regressions while increasing how many features are included in the model so that each iteration includes the ith most important features. 
+
+The best score was about 0.85 when only 4, 8, or 9 features are included. This is only slightly better than including all features, so I'll just deem all features as important. Unfortunately, dimensionality reduction was not achieved.
 
 # Dataset Notes
 This dataset was obtained form UC Irvine's machine learning repository.
