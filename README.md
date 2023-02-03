@@ -1,5 +1,5 @@
 # Heart Disease Classification
-Practicing classification with heart disease data. I compare logistic regression, SVM, decision tree, random forest, and naive bayesian models then determine the most reasonable model to predict heart disease in patients.
+Practicing classification with heart disease data. I compare logistic regression, SVM, decision tree, random forest, naive bayesian models, and XGBoost then determine the most reasonable model to predict heart disease in patients.
 
 # clean_data.py
 This script converts the CSV into a dataframe. There are methods to manipulate the dataframe, including throwing entries with missing values, replacing missing values with the column's mode, reducing the Sick classification to one value, and scaling features.
